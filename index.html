@@ -16,6 +16,11 @@ body{
   overflow-x:hidden;
 }
 
+body.menu-open{
+  overflow:hidden;
+  touch-action:none;
+}
+
 /* ── CSS VARIABLES ── */
 :root{
   --green-dark:#0d2e1a;
@@ -1624,36 +1629,128 @@ section { transition: background 0.3s ease }
    MOBILE NAV
 ──────────────────── */
 .mobile-menu{
-  display:none;position:fixed;inset:0;z-index:99;
+  display:none;position:fixed;inset:0;z-index:120;
   background:rgba(13,46,26,0.98);backdrop-filter:blur(12px);
   flex-direction:column;align-items:center;justify-content:center;
-  gap:2rem;
+  gap:1.25rem;
+  padding:6rem 1.5rem 2rem;
+  text-align:center;
 }
 .mobile-menu.open{display:flex}
-.mobile-menu a{color:#fff;font-size:24px;font-weight:700;text-decoration:none;transition:color 0.2s}
+.mobile-menu a{color:#fff;font-size:24px;font-weight:700;text-decoration:none;transition:color 0.2s;line-height:1.2}
 .mobile-menu a:hover{color:var(--green-bright)}
 
 /* ────────────────────
    RESPONSIVE
 ──────────────────── */
 @media(max-width:900px){
-  #hero{flex-direction:column;min-height:auto;padding-top:64px}
-  .hero-left{flex:none;width:100%;padding:3rem 1.5rem 1.5rem;order:2}
-  .hero-center{flex:none;width:100%;max-height:55vw;order:1;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .robot-img{max-height:55vw;width:auto;max-width:80%}
-  .hero-right{flex:none;width:100%;padding:1.5rem 1.5rem 3rem;order:3}
+  nav{padding:0 1rem;height:62px}
+  #hero{flex-direction:column;min-height:auto;padding-top:62px}
+  .hero-left{flex:none;width:100%;padding:2rem 1.5rem 2.25rem;order:3}
+  .hero-center{
+    flex:none;width:100%;height:min(62vw,420px);max-height:none;order:2;
+    overflow:hidden;display:flex;align-items:center;justify-content:center;margin-top:0
+  }
+  .robot-img{
+    width:100%;height:100%;max-height:none;max-width:none;
+    object-fit:contain;object-position:center top
+  }
+  .hero-right{flex:none;width:100%;padding:2rem 1.5rem 0.75rem;order:1}
   .hero-headline{font-size:clamp(40px,10vw,60px)}
-  .stats-grid{grid-template-columns:1fr 1fr;gap:2rem}
-  .pain-cards,.services-grid,.process-cards,.pricing-grid{grid-template-columns:1fr}
-  .works-grid{grid-template-columns:1fr}
+  .hero-tagline{max-width:100%}
+  .hero-cta{width:100%;justify-content:center}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
+  .works-header{flex-direction:column;align-items:flex-start;gap:1rem}
+  .wcard-screen{height:220px}
   nav .nav-links,.nav-btn{display:none}
   .hamburger{display:flex}
   section{padding:5rem 1.5rem !important}
   footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem}
-  .contact-form{flex-direction:column}
+  .contact-form{flex-direction:column;gap:0.85rem}
   .contact-input{border-right:1.5px solid rgba(255,255,255,0.1);border-radius:50px}
   .contact-submit{border-radius:50px}
   .price-card.featured{transform:none}
+}
+
+@media(max-width:480px){
+  nav{
+    padding:calc(10px + env(safe-area-inset-top, 0px)) 16px 10px;
+    height:auto;
+    min-height:62px;
+  }
+  .nav-logo-text{font-size:13px}
+  .nav-logo-icon{width:30px;height:30px;font-size:12px}
+  .mobile-menu{
+    padding:6.5rem 1.25rem 2rem;
+    justify-content:flex-start;
+  }
+  .mobile-menu a{font-size:clamp(20px,6vw,26px)}
+  #hero{min-height:100svh;padding-top:62px}
+  .hero-right{padding:1.75rem 1.25rem 0.5rem}
+  .hero-headline{
+    font-size:clamp(36px,11vw,52px);
+    line-height:0.96;
+    letter-spacing:-0.03em;
+  }
+  .hero-sub-brand{margin-top:1rem;font-size:9px;letter-spacing:0.24em}
+  .hero-center{height:72vw;min-height:240px}
+  .hero-left{padding:1.25rem 1.25rem 2.5rem}
+  .hero-tagline{font-size:13px;line-height:1.7;margin-bottom:1.25rem}
+  .hero-cta{padding:16px 18px;font-size:15px}
+  .ticker-item{font-size:14px;gap:1.25rem;padding:0 1.25rem}
+  section,
+  #about,
+  #pain,
+  #works,
+  #services,
+  #process,
+  #pricing,
+  #contact{padding:4rem 1.25rem !important}
+  .about-title,
+  .pain-title,
+  .works-title,
+  .section-title,
+  .process-title,
+  .pricing-title{
+    font-size:clamp(28px,8vw,38px);
+    margin-bottom:2rem;
+  }
+  .about-desc,.contact-desc{font-size:14px;line-height:1.65}
+  .stats-grid{grid-template-columns:1fr;gap:1.25rem}
+  .stat-item,
+  .pain-card,
+  .service-card,
+  .process-card,
+  .price-card,
+  .wmore-card{border-radius:20px}
+  .pain-card,
+  .service-card,
+  .process-card,
+  .price-card{padding:1.5rem}
+  .works-grid-new,.works-more{gap:1rem}
+  .wcard,.wcard::before,.wcard-hover-glow{border-radius:22px}
+  .wcard-mockup{padding:1rem 1rem 0}
+  .wcard-screen{height:180px}
+  .wcard-info{padding:1.15rem 1rem 1.25rem}
+  .wcard-title{font-size:18px}
+  .wcard-desc{font-size:13px;line-height:1.65}
+  .wmore-card{padding:1.4rem}
+  .contact-form{max-width:100%;gap:0.75rem}
+  .contact-input,.contact-submit{
+    width:100%;
+    padding:16px 18px;
+    font-size:16px;
+  }
+  .contact-links{flex-direction:column;gap:0.85rem}
+  .footer-links{justify-content:center;flex-wrap:wrap;gap:1rem}
+}
+
+@media(max-width:360px){
+  .nav-logo-text{display:none}
+  .hero-headline{font-size:34px}
+  .hero-center{min-height:210px}
+  .mobile-menu a{font-size:20px}
 }
 </style>
 </head>
@@ -2028,11 +2125,22 @@ section { transition: background 0.3s ease }
 <script>
 // ── MOBILE MENU ──
 function toggleMobile(){
-  document.getElementById('mobileMenu').classList.toggle('open');
+  const menu = document.getElementById('mobileMenu');
+  const isOpen = menu.classList.toggle('open');
+  document.body.classList.toggle('menu-open', isOpen);
 }
 function closeMobile(){
   document.getElementById('mobileMenu').classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 900) closeMobile();
+});
+
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') closeMobile();
+});
 
 // ── AURORA BEAMS — динамические пятна ──
 function spawnAuroraBeams(section) {
@@ -2110,6 +2218,10 @@ function animateCounter(el){
 // ── NAV SCROLL EFFECT ──
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
+  if(window.innerWidth <= 900){
+    nav.style.height = '';
+    return;
+  }
   nav.style.height = window.scrollY > 40 ? '56px' : '64px';
 });
 

@@ -191,6 +191,51 @@ nav{
   line-height:1.55;
   color:rgba(13,46,26,0.76);
 }
+.hero-telegram-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-top:1.15rem;
+  padding:0.7rem 1rem 0.7rem 0.75rem;
+  border-radius:999px;
+  background:rgba(255,255,255,0.32);
+  border:1px solid rgba(13,46,26,0.08);
+  box-shadow:0 10px 26px rgba(13,46,26,0.08);
+  backdrop-filter:blur(12px);
+}
+.hero-telegram-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#2aabee 0%,#1b90d8 100%);
+  box-shadow:0 8px 18px rgba(27,144,216,0.28);
+  flex-shrink:0;
+}
+.hero-telegram-icon svg{
+  width:19px;
+  height:19px;
+  display:block;
+}
+.hero-telegram-copy{
+  display:flex;
+  flex-direction:column;
+  gap:0.1rem;
+}
+.hero-telegram-copy strong{
+  font-size:12px;
+  line-height:1;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#0d2e1a;
+}
+.hero-telegram-copy span{
+  font-size:12px;
+  line-height:1.2;
+  color:rgba(13,46,26,0.62);
+}
 .hero-side-text strong{
   color:#0d2e1a;
   font-weight:800;
@@ -1691,6 +1736,7 @@ section { transition: background 0.3s ease }
   .hero-headline{font-size:clamp(44px,10vw,68px)}
   .hero-tagline{max-width:100%}
   .hero-cta{width:100%;justify-content:center}
+  .hero-telegram-badge{margin-top:1rem}
   .hero-side-text{max-width:100%;font-size:14px}
   .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -1726,6 +1772,18 @@ section { transition: background 0.3s ease }
     font-size:clamp(38px,11vw,56px);
     line-height:0.96;
     letter-spacing:-0.03em;
+  }
+  .hero-telegram-badge{
+    gap:0.7rem;
+    padding:0.65rem 0.9rem 0.65rem 0.7rem;
+  }
+  .hero-telegram-icon{
+    width:38px;
+    height:38px;
+  }
+  .hero-telegram-copy strong,
+  .hero-telegram-copy span{
+    font-size:11px;
   }
   .hero-side-text{
     margin-top:1rem;
@@ -1796,6 +1854,7 @@ section { transition: background 0.3s ease }
 @media(max-width:360px){
   .nav-logo-text{display:none}
   .hero-headline{font-size:34px}
+  .hero-telegram-badge{padding:0.6rem 0.8rem 0.6rem 0.65rem}
   .hero-side-text{font-size:13px}
   .hero-center{min-height:210px}
   .mobile-menu a{font-size:20px}
@@ -1835,6 +1894,17 @@ section { transition: background 0.3s ease }
 <section id="hero">
   <div class="hero-left">
     <p class="hero-tagline reveal">Сайты и Telegram-боты, которые продают.<br>Дизайн, код, автоматизация и запуск — за 24 часа.</p>
+    <div class="hero-telegram-badge reveal reveal-delay-1" aria-label="Telegram bots">
+      <div class="hero-telegram-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.4 5.37L4.92 10.95c-.99.4-.98.96-.18 1.2l3.72 1.16 8.61-5.43c.41-.25.79-.12.48.16l-6.98 6.3-.26 3.82c.38 0 .55-.17.76-.37l1.8-1.75 3.75 2.77c.69.38 1.18.18 1.35-.64l2.46-11.6c.25-1-.38-1.45-1.03-1.16z" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="hero-telegram-copy">
+        <strong>Telegram</strong>
+        <span>боты под ключ</span>
+      </div>
+    </div>
     <p class="hero-side-text reveal reveal-delay-1">
       <strong>Telegram-боты под ключ</strong> для заявок, записи, продаж и
       автоответов. Собираем воронку, подключаем оплату и упаковываем всё в сильный оффер.

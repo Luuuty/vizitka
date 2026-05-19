@@ -242,6 +242,27 @@ nav{
   color:#0d2e1a;
   font-weight:800;
 }
+.hero-side-functions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0.65rem;
+  width:min(100%,420px);
+  margin-top:1.15rem;
+}
+.hero-side-functions span{
+  display:flex;
+  align-items:center;
+  min-height:54px;
+  padding:0.8rem 0.95rem;
+  border-radius:18px;
+  background:rgba(255,255,255,0.24);
+  border:1px solid rgba(13,46,26,0.08);
+  color:#0d2e1a;
+  font-size:12px;
+  line-height:1.35;
+  font-weight:700;
+  box-shadow:0 10px 24px rgba(13,46,26,0.06);
+}
 .hero-side-points{
   display:flex;
   flex-wrap:wrap;
@@ -1740,6 +1761,7 @@ section { transition: background 0.3s ease }
   .hero-cta{width:100%;justify-content:center}
   .hero-telegram-badge{margin-top:1rem;width:min(100%,460px)}
   .hero-side-text{max-width:100%;font-size:15px}
+  .hero-side-functions{width:100%;max-width:100%}
   .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
   .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
@@ -1792,6 +1814,17 @@ section { transition: background 0.3s ease }
     margin-top:1rem;
     font-size:14px;
     line-height:1.62;
+  }
+  .hero-side-functions{
+    grid-template-columns:1fr;
+    gap:0.5rem;
+    margin-top:0.9rem;
+  }
+  .hero-side-functions span{
+    min-height:auto;
+    padding:0.7rem 0.85rem;
+    font-size:11px;
+    border-radius:16px;
   }
   .hero-side-points{
     gap:0.45rem;
@@ -1913,6 +1946,12 @@ section { transition: background 0.3s ease }
       <strong>Telegram-боты под ключ</strong> для заявок, записи, продаж и
       автоответов. Собираем воронку, подключаем оплату и упаковываем всё в сильный оффер.
     </p>
+    <div class="hero-side-functions reveal reveal-delay-2">
+      <span>Приём заявок и автоответы 24/7</span>
+      <span>Онлайн-оплата прямо в Telegram</span>
+      <span>Запись клиентов и напоминания</span>
+      <span>Интеграции с CRM и Google Sheets</span>
+    </div>
     <div class="hero-side-points reveal reveal-delay-2">
       <span>Лид-боты</span>
       <span>Продажи</span>

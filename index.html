@@ -115,15 +115,16 @@ nav{
 .hero-left{
   flex:0 0 28%;
   display:flex;flex-direction:column;justify-content:flex-end;
+  align-items:flex-start;
   padding:4rem 2rem 5rem 4rem;
   position:relative;z-index:5;
 }
 .hero-eyebrow{display:none}
 .hero-tagline{
-  font-size:13.5px;line-height:1.85;
-  color:rgba(13,46,26,0.75);
-  max-width:280px;
-  margin-bottom:2rem;font-weight:400;
+  font-size:15px;line-height:1.95;
+  color:rgba(13,46,26,0.78);
+  max-width:340px;
+  margin-bottom:0.25rem;font-weight:400;
 }
 .hero-cta{
   display:inline-flex;align-items:center;gap:10px;
@@ -185,17 +186,18 @@ nav{
   margin-top:0.05em;
 }
 .hero-side-text{
-  margin-top:1.4rem;
-  max-width:320px;
-  font-size:15px;
-  line-height:1.55;
-  color:rgba(13,46,26,0.76);
+  margin-top:1.6rem;
+  max-width:390px;
+  font-size:16px;
+  line-height:1.72;
+  color:rgba(13,46,26,0.74);
 }
 .hero-telegram-badge{
   display:inline-flex;
   align-items:center;
   gap:0.8rem;
   margin-top:1.15rem;
+  width:min(100%,420px);
   padding:0.7rem 1rem 0.7rem 0.75rem;
   border-radius:999px;
   background:rgba(255,255,255,0.32);
@@ -225,14 +227,14 @@ nav{
   gap:0.1rem;
 }
 .hero-telegram-copy strong{
-  font-size:12px;
+  font-size:13px;
   line-height:1;
-  letter-spacing:0.08em;
+  letter-spacing:0.09em;
   text-transform:uppercase;
   color:#0d2e1a;
 }
 .hero-telegram-copy span{
-  font-size:12px;
+  font-size:13px;
   line-height:1.2;
   color:rgba(13,46,26,0.62);
 }
@@ -243,20 +245,20 @@ nav{
 .hero-side-points{
   display:flex;
   flex-wrap:wrap;
-  gap:0.55rem;
-  margin-top:1rem;
-  max-width:360px;
+  gap:0.7rem;
+  margin-top:1.2rem;
+  max-width:390px;
 }
 .hero-side-points span{
   display:inline-flex;
   align-items:center;
-  padding:0.5rem 0.8rem;
+  padding:0.62rem 0.95rem;
   border-radius:999px;
   background:rgba(255,255,255,0.34);
   border:1px solid rgba(13,46,26,0.08);
   color:#0d2e1a;
-  font-size:11px;
-  font-weight:700;
+  font-size:12px;
+  font-weight:800;
   letter-spacing:0.04em;
   text-transform:uppercase;
   backdrop-filter:blur(10px);
@@ -1736,8 +1738,8 @@ section { transition: background 0.3s ease }
   .hero-headline{font-size:clamp(44px,10vw,68px)}
   .hero-tagline{max-width:100%}
   .hero-cta{width:100%;justify-content:center}
-  .hero-telegram-badge{margin-top:1rem}
-  .hero-side-text{max-width:100%;font-size:14px}
+  .hero-telegram-badge{margin-top:1rem;width:min(100%,460px)}
+  .hero-side-text{max-width:100%;font-size:15px}
   .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
   .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
@@ -1775,6 +1777,7 @@ section { transition: background 0.3s ease }
   }
   .hero-telegram-badge{
     gap:0.7rem;
+    width:100%;
     padding:0.65rem 0.9rem 0.65rem 0.7rem;
   }
   .hero-telegram-icon{
@@ -1788,7 +1791,7 @@ section { transition: background 0.3s ease }
   .hero-side-text{
     margin-top:1rem;
     font-size:14px;
-    line-height:1.5;
+    line-height:1.62;
   }
   .hero-side-points{
     gap:0.45rem;
@@ -1801,7 +1804,7 @@ section { transition: background 0.3s ease }
   .hero-sub-brand{margin-top:1rem;font-size:9px;letter-spacing:0.24em}
   .hero-center{height:72vw;min-height:240px}
   .hero-left{padding:1.25rem 1.25rem 2.5rem}
-  .hero-tagline{font-size:13px;line-height:1.7;margin-bottom:1.25rem}
+  .hero-tagline{font-size:14px;line-height:1.75;margin-bottom:0.1rem}
   .hero-cta{padding:16px 18px;font-size:15px}
   .ticker-item{font-size:14px;gap:1.25rem;padding:0 1.25rem}
   section,
@@ -1856,6 +1859,7 @@ section { transition: background 0.3s ease }
   .hero-headline{font-size:34px}
   .hero-telegram-badge{padding:0.6rem 0.8rem 0.6rem 0.65rem}
   .hero-side-text{font-size:13px}
+  .hero-tagline{font-size:13px}
   .hero-center{min-height:210px}
   .mobile-menu a{font-size:20px}
 }

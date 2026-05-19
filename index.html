@@ -172,10 +172,10 @@ nav{
   position:relative;z-index:5;
 }
 .hero-headline{
-  font-size:clamp(48px,5.2vw,82px);
-  font-weight:900;line-height:0.97;
+  font-size:clamp(54px,5.8vw,92px);
+  font-weight:900;line-height:0.94;
   color:#0d2e1a;
-  letter-spacing:-0.025em;
+  letter-spacing:-0.035em;
 }
 .hero-headline em{
   font-style:italic;font-weight:400;
@@ -184,10 +184,42 @@ nav{
   line-height:1.05;
   margin-top:0.05em;
 }
+.hero-side-text{
+  margin-top:1.4rem;
+  max-width:320px;
+  font-size:15px;
+  line-height:1.55;
+  color:rgba(13,46,26,0.76);
+}
+.hero-side-text strong{
+  color:#0d2e1a;
+  font-weight:800;
+}
+.hero-side-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem;
+  margin-top:1rem;
+  max-width:360px;
+}
+.hero-side-points span{
+  display:inline-flex;
+  align-items:center;
+  padding:0.5rem 0.8rem;
+  border-radius:999px;
+  background:rgba(255,255,255,0.34);
+  border:1px solid rgba(13,46,26,0.08);
+  color:#0d2e1a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  backdrop-filter:blur(10px);
+}
 .hero-sub-brand{
   font-size:10.5px;font-weight:700;letter-spacing:0.32em;
   color:rgba(13,46,26,0.42);text-transform:uppercase;
-  margin-top:2rem;
+  margin-top:1.35rem;
 }
 
 
@@ -1656,9 +1688,11 @@ section { transition: background 0.3s ease }
     object-fit:contain;object-position:center top
   }
   .hero-right{flex:none;width:100%;padding:2rem 1.5rem 0.75rem;order:1}
-  .hero-headline{font-size:clamp(40px,10vw,60px)}
+  .hero-headline{font-size:clamp(44px,10vw,68px)}
   .hero-tagline{max-width:100%}
   .hero-cta{width:100%;justify-content:center}
+  .hero-side-text{max-width:100%;font-size:14px}
+  .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
   .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
   .works-header{flex-direction:column;align-items:flex-start;gap:1rem}
@@ -1689,9 +1723,22 @@ section { transition: background 0.3s ease }
   #hero{min-height:100svh;padding-top:62px}
   .hero-right{padding:1.75rem 1.25rem 0.5rem}
   .hero-headline{
-    font-size:clamp(36px,11vw,52px);
+    font-size:clamp(38px,11vw,56px);
     line-height:0.96;
     letter-spacing:-0.03em;
+  }
+  .hero-side-text{
+    margin-top:1rem;
+    font-size:14px;
+    line-height:1.5;
+  }
+  .hero-side-points{
+    gap:0.45rem;
+    margin-top:0.85rem;
+  }
+  .hero-side-points span{
+    padding:0.45rem 0.7rem;
+    font-size:10px;
   }
   .hero-sub-brand{margin-top:1rem;font-size:9px;letter-spacing:0.24em}
   .hero-center{height:72vw;min-height:240px}
@@ -1749,6 +1796,7 @@ section { transition: background 0.3s ease }
 @media(max-width:360px){
   .nav-logo-text{display:none}
   .hero-headline{font-size:34px}
+  .hero-side-text{font-size:13px}
   .hero-center{min-height:210px}
   .mobile-menu a{font-size:20px}
 }
@@ -1805,7 +1853,17 @@ section { transition: background 0.3s ease }
       Закажи<br>сегодня,
       <em>запусти<br>завтра.</em>
     </h1>
-    <p class="hero-sub-brand reveal reveal-delay-1">MONO·LAND.</p>
+    <p class="hero-side-text reveal reveal-delay-1">
+      <strong>Telegram-боты под ключ</strong> для заявок, записи, продаж и
+      автоответов. Собираем воронку, подключаем оплату и упаковываем всё в сильный оффер.
+    </p>
+    <div class="hero-side-points reveal reveal-delay-2">
+      <span>Лид-боты</span>
+      <span>Продажи</span>
+      <span>Автоворонки</span>
+      <span>Интеграции</span>
+    </div>
+    <p class="hero-sub-brand reveal reveal-delay-3">MONO·LAND.</p>
   </div>
 </section>
 

@@ -1539,6 +1539,190 @@ nav{
 }
 .contact-link:hover{color:rgba(255,255,255,0.8)}
 
+/* Additional content blocks */
+#cases,
+#bot-features,
+#use-cases,
+#why-us,
+#testimonials,
+#faq,
+#final-cta{
+  background:#c1d0c3;
+  position:relative;
+}
+#cases::before,
+#bot-features::before,
+#use-cases::before,
+#why-us::before,
+#testimonials::before,
+#faq::before,
+#final-cta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.24), transparent 36%),
+    radial-gradient(circle at bottom left, rgba(61,122,87,0.08), transparent 28%);
+  pointer-events:none;
+}
+.content-inner{
+  max-width:1240px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+.content-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:2rem;
+  margin-bottom:3rem;
+}
+.content-title{
+  font-size:clamp(34px,4.6vw,64px);
+  line-height:1.02;
+  color:#0d2e1a;
+  letter-spacing:-0.04em;
+}
+.content-title em{
+  font-style:italic;
+  font-weight:400;
+  color:#1a6040;
+}
+.content-copy{
+  max-width:430px;
+  font-size:15px;
+  line-height:1.7;
+  color:rgba(13,46,26,0.7);
+}
+.cases-grid,.bot-features-grid,.use-cases-grid,.why-us-grid,.testimonials-grid{
+  display:grid;
+  gap:1.25rem;
+}
+.cases-grid,.testimonials-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bot-features-grid,.use-cases-grid,.why-us-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cases-card,.bot-feature-card,.use-case-card,.why-us-card,.testimonial-card,.faq-item,.final-cta-card{
+  border-radius:24px;
+  border:1px solid rgba(13,46,26,0.08);
+  box-shadow:0 18px 50px rgba(13,46,26,0.06);
+}
+.cases-card,.bot-feature-card,.use-case-card,.why-us-card,.testimonial-card,.faq-item{
+  background:rgba(255,255,255,0.48);
+  backdrop-filter:blur(10px);
+}
+.cases-card,.bot-feature-card,.use-case-card,.why-us-card,.testimonial-card{padding:1.5rem}
+.cases-label,.use-case-label,.testimonial-role{
+  display:inline-flex;
+  padding:0.38rem 0.65rem;
+  border-radius:999px;
+  background:rgba(13,46,26,0.08);
+  color:rgba(13,46,26,0.72);
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-bottom:0.95rem;
+}
+.cases-card strong,.bot-feature-card strong,.use-case-card strong,.why-us-card strong,.faq-item strong{
+  display:block;
+  color:#0d2e1a;
+}
+.cases-card p,.bot-feature-card p,.use-case-card p,.why-us-card p,.testimonial-card p,.faq-item p{
+  margin-top:0.75rem;
+  font-size:14px;
+  line-height:1.68;
+  color:rgba(13,46,26,0.7);
+}
+.cases-result{
+  margin-top:1rem;
+  font-size:28px;
+  line-height:1;
+  font-weight:900;
+  color:#1a6040;
+}
+.bot-feature-icon,.use-case-icon,.why-us-icon{
+  width:46px;height:46px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg, rgba(13,46,26,0.96), rgba(33,108,69,0.92));
+  color:#fff;font-size:19px;margin-bottom:1rem;
+  box-shadow:0 14px 28px rgba(13,46,26,0.12);
+}
+.testimonial-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:240px;
+}
+.testimonial-stars{
+  color:#1a6040;
+  letter-spacing:0.18em;
+  font-size:14px;
+  margin-bottom:1rem;
+}
+.testimonial-name{
+  margin-top:1.25rem;
+  font-size:16px;
+  font-weight:800;
+  color:#0d2e1a;
+}
+.faq-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.faq-item{padding:1.3rem 1.4rem}
+.faq-item strong{
+  font-size:18px;
+  line-height:1.25;
+}
+.final-cta-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at top right, rgba(103,255,157,0.22), transparent 30%),
+    linear-gradient(135deg, #0d2e1a 0%, #153724 58%, #1b4f33 100%);
+  padding:3rem;
+  color:#fff;
+}
+.final-cta-card::after{
+  content:'';
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  right:-60px;
+  bottom:-80px;
+  background:radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+}
+.final-cta-card .content-title,
+.final-cta-card .content-title em{color:#fff}
+.final-cta-card .content-copy{
+  color:rgba(255,255,255,0.72);
+  max-width:520px;
+}
+.final-cta-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.85rem;
+  margin-top:2rem;
+}
+.final-cta-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0.95rem 1.35rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:800;
+}
+.final-cta-actions .primary{background:#fff;color:#0d2e1a}
+.final-cta-actions .secondary{
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.16);
+}
+
 /* ────────────────────
    FOOTER
 ──────────────────── */
@@ -1781,8 +1965,9 @@ section { transition: background 0.3s ease }
   .hero-side-actions{width:100%;max-width:100%}
   .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
-  .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
-  .works-header{flex-direction:column;align-items:flex-start;gap:1rem}
+  .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more,.cases-grid,.bot-features-grid,.use-cases-grid,.why-us-grid,.testimonials-grid,.faq-grid{grid-template-columns:1fr}
+  .works-header,.content-head{flex-direction:column;align-items:flex-start;gap:1rem}
+  .content-copy{max-width:100%}
   .wcard-screen{height:220px}
   nav .nav-links,.nav-btn{display:none}
   .hamburger{display:flex}
@@ -1855,6 +2040,11 @@ section { transition: background 0.3s ease }
   .hero-left{padding:1.25rem 1.25rem 2.5rem}
   .hero-tagline{font-size:14px;line-height:1.75;margin-bottom:0.1rem}
   .hero-cta{padding:16px 18px;font-size:15px}
+  .content-title{font-size:clamp(30px,8vw,42px)}
+  .cases-card,.bot-feature-card,.use-case-card,.why-us-card,.testimonial-card,.faq-item{padding:1.2rem}
+  .faq-item strong{font-size:16px}
+  .final-cta-card{padding:2rem 1.25rem}
+  .final-cta-actions a{width:100%}
   .ticker-item{font-size:14px;gap:1.25rem;padding:0 1.25rem}
   section,
   #about,
@@ -2266,6 +2456,247 @@ section { transition: background 0.3s ease }
 </section>
 
 <!-- ── CONTACT ── -->
+<!-- CASES -->
+<section id="cases">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">CASES</div>
+        <h2 class="content-title reveal">Кейсы и <em>результаты</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Не просто делаем красивый экран. Собираем сайт или Telegram-бота так, чтобы он принимал заявки, сокращал ручную работу и помогал продавать.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="cases-card reveal-up reveal-delay-1">
+        <span class="cases-label">Салон</span>
+        <strong>Бот для записи и напоминаний</strong>
+        <p>Собрали сценарий записи в Telegram, автоматические напоминания и быстрый переход к администратору без лишних сообщений.</p>
+        <div class="cases-result">-60% ручных ответов</div>
+      </div>
+      <div class="cases-card reveal-up reveal-delay-2">
+        <span class="cases-label">Магазин</span>
+        <strong>Бот для продаж и оплаты</strong>
+        <p>Сделали каталог, сбор заказов, подтверждение в один клик и передачу заявок менеджеру в удобном формате.</p>
+        <div class="cases-result">+35% заявок</div>
+      </div>
+      <div class="cases-card reveal-up reveal-delay-3">
+        <span class="cases-label">Услуги</span>
+        <strong>Лендинг + бот под рекламу</strong>
+        <p>Упаковали оффер, сделали сайт и связали его с Telegram, чтобы лиды сразу попадали в диалог и не терялись.</p>
+        <div class="cases-result">Ответ за 1 минуту</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOT FEATURES -->
+<section id="bot-features">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">BOT FEATURES</div>
+        <h2 class="content-title reveal">Что умеет <em>Telegram-бот</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Ниже не абстрактные слова, а конкретные функции, которые можно встроить под ваш бизнес и связать с заявками, оплатой и клиентской базой.</p>
+    </div>
+    <div class="bot-features-grid">
+      <div class="bot-feature-card reveal-up reveal-delay-1">
+        <div class="bot-feature-icon">✉</div>
+        <strong>Принимает заявки</strong>
+        <p>Собирает имя, номер, услугу и комментарий, а потом отправляет заявку менеджеру или в таблицу.</p>
+      </div>
+      <div class="bot-feature-card reveal-up reveal-delay-2">
+        <div class="bot-feature-icon">⚡</div>
+        <strong>Отвечает автоматически</strong>
+        <p>Прогревает клиента, отвечает на частые вопросы и доводит до следующего действия без ожидания.</p>
+      </div>
+      <div class="bot-feature-card reveal-up reveal-delay-3">
+        <div class="bot-feature-icon">₽</div>
+        <strong>Принимает оплату</strong>
+        <p>Подключаем оплату, тарифы, подтверждения и уведомления, чтобы деньги можно было принимать прямо в Telegram.</p>
+      </div>
+      <div class="bot-feature-card reveal-up reveal-delay-4">
+        <div class="bot-feature-icon">↗</div>
+        <strong>Связывается с CRM</strong>
+        <p>Передаёт данные в CRM, Google Sheets или менеджеру, чтобы заявки не терялись и обрабатывались быстрее.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="use-cases">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">SCENARIOS</div>
+        <h2 class="content-title reveal">Для кого подходят <em>наши боты</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Делаем решения не “вообще”, а под конкретный путь клиента: запись, заказ, консультация, продажа, повторный контакт и возврат.</p>
+    </div>
+    <div class="use-cases-grid">
+      <div class="use-case-card reveal-up reveal-delay-1">
+        <div class="use-case-icon">💇</div>
+        <span class="use-case-label">Салоны</span>
+        <strong>Бот для записи</strong>
+        <p>Запись, напоминания, перенос визита и сбор заявок в одном сценарии.</p>
+      </div>
+      <div class="use-case-card reveal-up reveal-delay-2">
+        <div class="use-case-icon">🛒</div>
+        <span class="use-case-label">Магазины</span>
+        <strong>Бот-магазин</strong>
+        <p>Каталог, оформление заказа, допродажи и передача заказов менеджеру.</p>
+      </div>
+      <div class="use-case-card reveal-up reveal-delay-3">
+        <div class="use-case-icon">🚚</div>
+        <span class="use-case-label">Доставка</span>
+        <strong>Бот для заявок</strong>
+        <p>Быстрый приём заказов, выбор услуги и автоматический сбор данных клиента.</p>
+      </div>
+      <div class="use-case-card reveal-up reveal-delay-4">
+        <div class="use-case-icon">📚</div>
+        <span class="use-case-label">Эксперты</span>
+        <strong>Бот-воронка</strong>
+        <p>Выдача материалов, прогрев, сегментация и перевод клиента к продаже.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">WHY US</div>
+        <h2 class="content-title reveal">Почему выбирают <em>нас</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Работаем не как подрядчик “сделал и исчез”, а как партнёр: продумываем путь клиента, упаковываем предложение и доводим всё до запуска.</p>
+    </div>
+    <div class="why-us-grid">
+      <div class="why-us-card reveal-up reveal-delay-1">
+        <div class="why-us-icon">24</div>
+        <strong>Быстрый старт</strong>
+        <p>Согласуем структуру, оффер и быстро запускаем первую рабочую версию без лишних кругов.</p>
+      </div>
+      <div class="why-us-card reveal-up reveal-delay-2">
+        <div class="why-us-icon">◎</div>
+        <strong>Под ключ</strong>
+        <p>Дизайн, код, тексты, формы, Telegram и публикация сайта в одном процессе.</p>
+      </div>
+      <div class="why-us-card reveal-up reveal-delay-3">
+        <div class="why-us-icon">↺</div>
+        <strong>Удобные доработки</strong>
+        <p>После запуска можно спокойно расширять сайт, сценарии бота и автоматизации по мере роста.</p>
+      </div>
+      <div class="why-us-card reveal-up reveal-delay-4">
+        <div class="why-us-icon">★</div>
+        <strong>Фокус на продажу</strong>
+        <p>Каждый блок на сайте и в боте нужен не просто для красоты, а для понятного движения к заявке.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">REVIEWS</div>
+        <h2 class="content-title reveal">Что говорят <em>клиенты</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Собрали формат отзывов так, чтобы они выглядели спокойно и убедительно. Потом можно будет заменить эти тексты на ваши реальные отзывы.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal-up reveal-delay-1">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>“Нужен был быстрый запуск сайта и Telegram-бота под рекламу. Всё сделали аккуратно, без хаоса, и заявки пошли уже в первые дни.”</p>
+        </div>
+        <div>
+          <div class="testimonial-name">Алина</div>
+          <div class="testimonial-role">Сфера услуг</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-up reveal-delay-2">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>“Понравилось, что не просто сверстали сайт, а реально помогли собрать оффер, тексты и путь клиента до заявки.”</p>
+        </div>
+        <div>
+          <div class="testimonial-name">Руслан</div>
+          <div class="testimonial-role">Малый бизнес</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-up reveal-delay-3">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p>“Бот снял с менеджера рутину: теперь клиент получает ответ сразу, а мы берём в работу уже подготовленные заявки.”</p>
+        </div>
+        <div>
+          <div class="testimonial-name">Марина</div>
+          <div class="testimonial-role">Онлайн-продажи</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="content-inner">
+    <div class="content-head">
+      <div>
+        <div class="section-eyebrow reveal">FAQ</div>
+        <h2 class="content-title reveal">Частые <em>вопросы</em></h2>
+      </div>
+      <p class="content-copy reveal reveal-delay-1">Блок, который снимает лишние сомнения до первого сообщения. Это помогает пользователю быстрее понять сроки, стоимость и формат работы.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal-up reveal-delay-1">
+        <strong>Сколько стоит Telegram-бот?</strong>
+        <p>Зависит от сценария: простой бот для заявок стоит дешевле, чем бот с оплатой, каталогом и интеграциями.</p>
+      </div>
+      <div class="faq-item reveal-up reveal-delay-2">
+        <strong>За сколько можно запустить проект?</strong>
+        <p>Первую рабочую версию сайта или бота можно собрать быстро, а потом уже докручивать детали и расширять функциональность.</p>
+      </div>
+      <div class="faq-item reveal-up reveal-delay-3">
+        <strong>Можно ли сделать сайт и бота вместе?</strong>
+        <p>Да. Это один из самых сильных сценариев: сайт продаёт, а Telegram-бот сразу принимает и обрабатывает лиды.</p>
+      </div>
+      <div class="faq-item reveal-up reveal-delay-4">
+        <strong>Можно ли потом доработать проект?</strong>
+        <p>Да, можно добавлять новые ветки бота, страницы, формы, оплаты, CRM и дополнительные автоматизации.</p>
+      </div>
+      <div class="faq-item reveal-up reveal-delay-5">
+        <strong>Что нужно от клиента на старте?</strong>
+        <p>Коротко понять продукт, аудиторию, цель и что именно должен сделать пользователь: написать, записаться или купить.</p>
+      </div>
+      <div class="faq-item reveal-up reveal-delay-5">
+        <strong>Если нет текстов и структуры?</strong>
+        <p>Это нормально. Поможем собрать оффер, структуру, нужные экраны и логику сценария под ваш бизнес.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="content-inner">
+    <div class="final-cta-card reveal-scale">
+      <div class="section-eyebrow" style="color:rgba(255,255,255,0.5)">READY TO START</div>
+      <h2 class="content-title">Нужен сайт или <em>Telegram-бот</em>?</h2>
+      <p class="content-copy">Напишите нам сегодня и получите понятную смету, структуру проекта и лучший формат запуска именно под ваш бизнес.</p>
+      <div class="final-cta-actions">
+        <a class="primary" href="https://t.me/erickcryptoman?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82" target="_blank" rel="noopener noreferrer">Обсудить проект в Telegram</a>
+        <a class="secondary" href="#contact" onclick="focusContactForm(event)">Получить смету сегодня</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <!-- Aurora blobs -->
   <div class="aurora-1"></div>

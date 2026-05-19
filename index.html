@@ -242,26 +242,43 @@ nav{
   color:#0d2e1a;
   font-weight:800;
 }
-.hero-side-functions{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:0.65rem;
-  width:min(100%,420px);
-  margin-top:1.15rem;
-}
-.hero-side-functions span{
+.hero-side-actions{
   display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  width:min(100%,420px);
+  margin-top:1.1rem;
+}
+.hero-side-action{
+  display:inline-flex;
   align-items:center;
-  min-height:54px;
-  padding:0.8rem 0.95rem;
-  border-radius:18px;
-  background:rgba(255,255,255,0.24);
-  border:1px solid rgba(13,46,26,0.08);
+  justify-content:center;
+  min-height:46px;
+  padding:0.78rem 1rem;
+  border-radius:999px;
+  background:rgba(255,255,255,0.28);
+  border:1px solid rgba(13,46,26,0.1);
   color:#0d2e1a;
+  text-decoration:none;
   font-size:12px;
-  line-height:1.35;
-  font-weight:700;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:0.03em;
+  transition:transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   box-shadow:0 10px 24px rgba(13,46,26,0.06);
+}
+.hero-side-action:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,0.42);
+}
+.hero-side-action.primary{
+  background:#0d2e1a;
+  border-color:#0d2e1a;
+  color:#fff;
+  box-shadow:0 14px 32px rgba(13,46,26,0.22);
+}
+.hero-side-action.primary:hover{
+  background:#1a5c35;
 }
 .hero-side-points{
   display:flex;
@@ -1761,7 +1778,7 @@ section { transition: background 0.3s ease }
   .hero-cta{width:100%;justify-content:center}
   .hero-telegram-badge{margin-top:1rem;width:min(100%,460px)}
   .hero-side-text{max-width:100%;font-size:15px}
-  .hero-side-functions{width:100%;max-width:100%}
+  .hero-side-actions{width:100%;max-width:100%}
   .hero-side-points{max-width:100%}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
   .pain-cards,.services-grid,.process-cards,.pricing-grid,.works-grid-new,.works-more{grid-template-columns:1fr}
@@ -1815,16 +1832,15 @@ section { transition: background 0.3s ease }
     font-size:14px;
     line-height:1.62;
   }
-  .hero-side-functions{
-    grid-template-columns:1fr;
-    gap:0.5rem;
+  .hero-side-actions{
+    gap:0.55rem;
     margin-top:0.9rem;
   }
-  .hero-side-functions span{
+  .hero-side-action{
+    width:100%;
     min-height:auto;
-    padding:0.7rem 0.85rem;
+    padding:0.8rem 0.9rem;
     font-size:11px;
-    border-radius:16px;
   }
   .hero-side-points{
     gap:0.45rem;
@@ -1946,17 +1962,14 @@ section { transition: background 0.3s ease }
       <strong>Telegram-боты под ключ</strong> для заявок, записи, продаж и
       автоответов. Собираем воронку, подключаем оплату и упаковываем всё в сильный оффер.
     </p>
-    <div class="hero-side-functions reveal reveal-delay-2">
-      <span>Приём заявок и автоответы 24/7</span>
-      <span>Онлайн-оплата прямо в Telegram</span>
-      <span>Запись клиентов и напоминания</span>
-      <span>Интеграции с CRM и Google Sheets</span>
+    <div class="hero-side-actions reveal reveal-delay-2">
+      <a class="hero-side-action primary" href="https://t.me/erickcryptoman?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%BD%D1%83%D0%B6%D0%B5%D0%BD%20Telegram-%D0%B1%D0%BE%D1%82" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+      <a class="hero-side-action" href="#contact" onclick="focusContactForm(event)">Оставить номер</a>
     </div>
     <div class="hero-side-points reveal reveal-delay-2">
       <span>Лид-боты</span>
       <span>Продажи</span>
       <span>Автоворонки</span>
-      <span>Интеграции</span>
     </div>
     <a href="#contact" class="hero-cta reveal reveal-delay-1">Получить смету →</a>
   </div>
@@ -2397,6 +2410,21 @@ window.addEventListener('scroll', () => {
 });
 
 // ── FORM SUBMIT ──
+function focusContactForm(event){
+  if(event) event.preventDefault();
+  const section = document.getElementById('contact');
+  const input = document.getElementById('phoneInput');
+  if(section){
+    section.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+  setTimeout(() => {
+    if(input){
+      input.focus();
+      if(typeof input.select === 'function') input.select();
+    }
+  }, 500);
+}
+
 function submitForm(){
   const input = document.getElementById('phoneInput');
   const val = input.value.trim();

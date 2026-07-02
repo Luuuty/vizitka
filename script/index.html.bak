@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neonix.dev - сайты и автоматизация для бизнеса</title>
+  <meta name="description" content="Проектируем сайты, Telegram-ботов и VK-ботов, которые выглядят современно, приводят заявки и автоматизируют продажи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-orb" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top" aria-label="Neonix.dev">
+        <span class="logo-mark">✦</span>
+        <span>Neonix<span>.dev</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn btn-small btn-gradient" href="#contact">Связаться</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="floating-shape shape-a"></div>
+      <div class="floating-shape shape-b"></div>
+      <div class="floating-dot dot-a"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="badge"><span></span> Принимаем заказы - отвечаем за 15 минут</div>
+          <h1>Запускаем <span>сайты и ботов</span>, которые выглядят дорого и продают</h1>
+          <p>Продуманный дизайн, быстрая разработка, CRM, аналитика и автоматизация заявок. Собираем цифровой продукт под ключ - от идеи до запуска.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gradient" href="#contact">Получить консультацию <span>→</span></a>
+            <a class="btn btn-outline" href="#cases"><span class="play-icon"></span> Смотреть кейсы</a>
+          </div>
+          <div class="stats-row">
+            <span>♕ <b>50+</b> проектов</span>
+            <span>☆ <b>4.9</b> рейтинг</span>
+            <span>◌ <b>24/7</b> поддержка</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="browser-card">
+            <div class="browser-dots">
+              <i></i><i></i><i></i>
+            </div>
+            <div class="browser-line line-wide"></div>
+            <div class="browser-line line-short"></div>
+            <div class="browser-tiles">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="browser-panel"></div>
+          </div>
+          <div class="chat-card">
+            <div class="chat-head">
+              <span>▣</span>
+              <div>
+                <b>Sales Bot</b>
+                <small>онлайн</small>
+              </div>
+            </div>
+            <div class="chat-separator"></div>
+            <div class="bubble left">Привет! Чем помочь?</div>
+            <div class="bubble faint">Хочу заказать сайт</div>
+            <div class="bubble left wide">Отлично! Выберите тип:</div>
+            <div class="chat-input"><span></span><button aria-label="Отправить">↗</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-strip">
+        <div class="section-label">Технологии</div>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>Python</span><span>Telegram API</span><span>VK API</span><span>amoCRM</span><span>Bitrix24</span><span>Stripe</span><span>YooKassa</span><span>PostgreSQL</span><span>Supabase</span><span>Figma</span><span>Framer Motion</span><span>OpenAI</span><span>n8n</span><span>React</span><span>Next.js</span>
+            <span>Python</span><span>Telegram API</span><span>VK API</span><span>amoCRM</span><span>Bitrix24</span><span>Stripe</span><span>YooKassa</span><span>PostgreSQL</span><span>Supabase</span><span>Figma</span><span>Framer Motion</span><span>OpenAI</span><span>n8n</span><span>React</span><span>Next.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Услуги</span>
+          <h2>Цифровые продукты для роста продаж</h2>
+          <p>Делаем сайты и ботов, которые понятно презентуют бизнес, собирают заявки и снимают ручную работу с команды.</p>
+        </div>
+        <div class="cards-grid services-grid">
+          <article class="service-card reveal">
+            <div class="icon-box">◎</div>
+            <h3>Сайты</h3>
+            <p>Лендинги, корпоративные сайты и интернет-магазины</p>
+            <ul>
+              <li>Уникальный дизайн под бренд</li>
+              <li>Адаптив для всех устройств</li>
+              <li>SEO и аналитика из коробки</li>
+              <li>Хостинг и домен</li>
+            </ul>
+            <div class="card-bottom">
+              <small>Стоимость<br><b>от 15 000 ₽</b></small>
+              <a href="#contact">Подробнее →</a>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon-box purple">☷</div>
+            <h3>Telegram-боты</h3>
+            <p>Продажи, поддержка, записи и автоворонки</p>
+            <ul>
+              <li>Приём заказов и оплаты</li>
+              <li>Автоответы 24/7</li>
+              <li>Интеграция с CRM</li>
+              <li>Рассылки и сегменты</li>
+            </ul>
+            <div class="card-bottom">
+              <small>Стоимость<br><b>от 8 000 ₽</b></small>
+              <a href="#contact">Подробнее →</a>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon-box">▱</div>
+            <h3>VK-боты</h3>
+            <p>Рассылки, автоответы и лидогенерация</p>
+            <ul>
+              <li>Воронки в личке и сообществе</li>
+              <li>Сценарии и квизы</li>
+              <li>Сегментированные рассылки</li>
+              <li>Подключение оплат VK Pay</li>
+            </ul>
+            <div class="card-bottom">
+              <small>Стоимость<br><b>от 8 000 ₽</b></small>
+              <a href="#contact">Подробнее →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="floating-shape shape-c"></div>
+      <div class="process-glow-dot" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label purple-text">Процесс</span>
+          <h2>Как мы работаем</h2>
+          <p>Прозрачный путь от первой идеи до аккуратного запуска без лишней суеты.</p>
+        </div>
+        <div class="process-line">
+          <article class="reveal">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h5"></path>
+                <path d="M10 16h7"></path>
+              </svg>
+            </div>
+            <h3>Оставляете заявку</h3>
+            <p>Оставляете заявку или пишете в Telegram - быстро возвращаемся с первыми вопросами.</p>
+          </article>
+          <article class="reveal">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 11.5a8.5 8.5 0 0 1-12.72 7.39L3 20l1.2-5.02A8.5 8.5 0 1 1 21 11.5z"></path>
+              </svg>
+            </div>
+            <h3>Обсуждаем задачу</h3>
+            <p>Разбираем цели, аудиторию, сроки и фиксируем понятный план работ.</p>
+          </article>
+          <article class="reveal">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m16 18 6-6-6-6"></path>
+                <path d="m8 6-6 6 6 6"></path>
+                <path d="m14 4-4 16"></path>
+              </svg>
+            </div>
+            <h3>Разрабатываем и тестируем</h3>
+            <p>Показываем промежуточные версии, проверяем сценарии, скорость и адаптив.</p>
+          </article>
+          <article class="reveal">
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 16c3.5-7.5 8-10.5 14-11-1 6-4 10.5-11 14l-3 2z"></path>
+                <path d="M15 6l3 3"></path>
+                <path d="M9 15l-4 4"></path>
+                <path d="M12 17v4"></path>
+                <path d="M7 12H3"></path>
+              </svg>
+            </div>
+            <h3>Сдаём и поддерживаем</h3>
+            <p>Публикуем проект, подключаем аналитику и остаёмся на поддержке после старта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <span class="section-label">Кейсы</span>
+            <h2>Результаты, которые видно в бизнесе</h2>
+            <p>Не просто красивые экраны, а проекты с понятной пользой: заявки, автоматизация и рост конверсии.</p>
+          </div>
+          <a class="btn btn-outline" href="#contact">Обсудить свой проект</a>
+        </div>
+        <div class="cards-grid cases-grid">
+          <article class="case-card reveal">
+            <div class="case-preview"><span>↗ Сайт</span></div>
+            <div class="case-content">
+              <strong>+230%</strong>
+              <small>заявок за 2 месяца</small>
+              <h3>Landing для фитнес-клуба «PulseGym»</h3>
+              <p>Пересобрали структуру, добавили онлайн-запись и CRM. Конверсия выросла с 1.2% до 4.0%.</p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-preview"><span>⚡ TG-бот</span></div>
+            <div class="case-content">
+              <strong>80%</strong>
+              <small>заказов автоматизировано</small>
+              <h3>Telegram-бот для доставки «FoodLine»</h3>
+              <p>Бот принимает заказ, считает доставку, проводит оплату и передаёт данные в iiko.</p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-preview"><span>⌁ VK-бот</span></div>
+            <div class="case-content">
+              <strong>+500</strong>
+              <small>новых клиентов в месяц</small>
+              <h3>VK-бот для beauty-студии «Lumen»</h3>
+              <p>Воронка с квизом, автозапись и рассылки по сегментам. Окупился за первые 3 недели работы.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label purple-text">Тарифы</span>
+          <h2>Понятные пакеты под задачу</h2>
+          <p>Стоимость фиксируем до старта. Если проект сложнее тарифа, собираем индивидуальное предложение.</p>
+          <div class="pricing-tabs" role="tablist" aria-label="Категории тарифов">
+            <button class="active" type="button" data-price-tab="sites">Сайты</button>
+            <button type="button" data-price-tab="bots">Боты</button>
+          </div>
+        </div>
+        <div class="pricing-grid price-set active" data-price-set="sites">
+          <article class="price-card reveal">
+            <h3>Базовый</h3>
+            <p>Лендинг до 5 секций</p>
+            <strong>15 000 ₽</strong>
+            <ul>
+              <li>Адаптивный дизайн</li>
+              <li>Форма заявки</li>
+              <li>Подключение домена</li>
+              <li>1 неделя поддержки</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Выбрать тариф</a>
+          </article>
+          <article class="price-card featured reveal">
+            <div class="popular">Популярный</div>
+            <h3>Бизнес</h3>
+            <p>Корпоративный сайт</p>
+            <strong>35 000 ₽</strong>
+            <ul>
+              <li>До 10 страниц</li>
+              <li>CMS для контента</li>
+              <li>SEO-оптимизация</li>
+              <li>Аналитика и пиксели</li>
+              <li>1 месяц поддержки</li>
+            </ul>
+            <a class="btn btn-gradient" href="#contact">Выбрать тариф</a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Премиум</h3>
+            <p>Интернет-магазин</p>
+            <strong>от 70 000 ₽</strong>
+            <ul>
+              <li>Каталог и фильтры</li>
+              <li>Оплата и доставка</li>
+              <li>Личный кабинет</li>
+              <li>Интеграция с 1C/CRM</li>
+              <li>3 месяца поддержки</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Выбрать тариф</a>
+          </article>
+        </div>
+        <div class="pricing-grid price-set" data-price-set="bots">
+          <article class="price-card">
+            <h3>Старт</h3>
+            <p>Бот с заявками</p>
+            <strong>8 000 ₽</strong>
+            <ul>
+              <li>Меню и сценарии</li>
+              <li>Уведомления менеджеру</li>
+              <li>Базовая аналитика</li>
+              <li>1 неделя поддержки</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Выбрать тариф</a>
+          </article>
+          <article class="price-card featured">
+            <div class="popular">Популярный</div>
+            <h3>Продажи</h3>
+            <p>Бот с оплатой и CRM</p>
+            <strong>25 000 ₽</strong>
+            <ul>
+              <li>Оплата внутри бота</li>
+              <li>CRM и таблицы</li>
+              <li>Автоворонка</li>
+              <li>Рассылки по сегментам</li>
+            </ul>
+            <a class="btn btn-gradient" href="#contact">Выбрать тариф</a>
+          </article>
+          <article class="price-card">
+            <h3>Автоматизация</h3>
+            <p>Сложная логика под бизнес</p>
+            <strong>от 45 000 ₽</strong>
+            <ul>
+              <li>Личный кабинет</li>
+              <li>Интеграции с API</li>
+              <li>Админ-панель</li>
+              <li>3 месяца поддержки</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Выбрать тариф</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Отзывы</span>
+          <h2>Клиенты отмечают скорость и внимание к деталям</h2>
+          <p>Свежие отзывы от предпринимателей, которым важны не только экраны, но и результат.</p>
+        </div>
+        <div class="cards-grid testimonial-grid">
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>«Сделали лендинг за 10 дней. Конверсия выросла в 3 раза, а команда была на связи на каждом этапе.»</p>
+            <div><span>АС</span><b>Анна Соколова</b><small>Основатель, PulseGym</small></div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>«Telegram-бот разгрузил операторов на 80%. Интеграция с iiko прошла спокойно, всё понятно описали.»</p>
+            <div><span>ДО</span><b>Дмитрий Орлов</b><small>CEO, FoodLine</small></div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>«VK-бот окупился за 3 недели. Воронка работает, рассылки приносят повторные продажи. Спасибо за внимание к мелочам.»</p>
+            <div><span>МК</span><b>Мария Кравцова</b><small>Lumen Beauty</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="section-label purple-text">FAQ</span>
+          <h2>Частые вопросы</h2>
+          <p>Коротко о сроках, оплате, поддержке и запуске проекта.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details open>
+            <summary>Сколько времени занимает разработка?</summary>
+            <p>Лендинг - 5-10 дней, корпоративный сайт - 2-3 недели, бот - от 3 дней до 2 недель в зависимости от сценариев.</p>
+          </details>
+          <details>
+            <summary>Что входит в поддержку после сдачи?</summary>
+            <p>Помогаем с запуском, правим мелкие ошибки, консультируем по админке, проверяем формы, аналитику и интеграции.</p>
+          </details>
+          <details>
+            <summary>Нужен ли мне сайт, если есть Instagram/VK?</summary>
+            <p>Да, если нужны доверие, заявки из поиска, удобная презентация услуг и независимая точка продаж вне соцсетей.</p>
+          </details>
+          <details>
+            <summary>Как происходит оплата?</summary>
+            <p>Обычно работаем по этапам: предоплата перед стартом и финальная оплата после демонстрации результата.</p>
+          </details>
+          <details>
+            <summary>Делаете ли вы доработки после сдачи?</summary>
+            <p>Да, можно подключить разовые доработки или ежемесячную поддержку с приоритетными задачами.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <span class="section-label">Контакты</span>
+            <h2>Готовы обсудить проект? <span>Напишите нам</span></h2>
+            <p>Опишите задачу в двух-трёх предложениях - вернёмся с оценкой, вопросами и понятным следующим шагом.</p>
+            <a class="contact-link" href="https://web.telegram.org/k/#@bim_developer" target="_blank" rel="noreferrer"><span>✈</span><b>Telegram</b><small>@bim_developer</small></a>
+            <a class="contact-link" href="https://vk.ru/rafwonko" target="_blank" rel="noreferrer"><span>VK</span><b>ВКонтакте</b><small>vk.ru/rafwonko</small></a>
+          </div>
+          <form class="lead-form">
+            <label>Имя<input type="text" name="name" placeholder="Александр"></label>
+            <label>Телефон или Telegram<input type="text" name="contact" placeholder="+7 999 123-45-67 или @username"></label>
+            <label>Услуга<select name="service"><option>Выберите услугу</option><option>Сайт</option><option>Telegram-бот</option><option>VK-бот</option><option>Комплексный проект</option></select></label>
+            <label>Сообщение<textarea name="message" placeholder="Кратко о задаче"></textarea></label>
+            <button class="btn btn-gradient" type="submit">Отправить заявку <span>↗</span></button>
+            <small>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="#top">Neonix<span>.dev</span></a>
+        <p>Проектируем сайты, Telegram- и VK-ботов для заявок, продаж и автоматизации бизнеса.</p>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <a href="#services">Услуги</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h3>Соцсети</h3>
+        <div class="socials">
+          <a href="https://web.telegram.org/k/#@bim_developer" target="_blank" rel="noreferrer">✈</a>
+          <a href="https://vk.ru/rafwonko" target="_blank" rel="noreferrer">VK</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
